@@ -4,7 +4,7 @@ APPS=(tomcat java openssl apache2)
 
 echo "Deleting old dirs..."
 
-for i in "${APPS[@]}"; do rm -fr $i{i}; done 
+for i in "${APPS[@]}"; do rm -fr ${i}; done 
 
 echo "Refresh repos..." 
 
