@@ -42,7 +42,20 @@ if tarball_url =~ /example.com/
   Chef::Application.fatal!("You must change the download link to your private repository. You can no longer download java directly from http://download.oracle.com without a web broswer")
 end
 
-include_recipe "java::set_java_home"
+ruby_block  "set-env-java-home" do
+  block do
+    ENV["JAVA_HOME"] = java_home
+  end
+  not_if { ENV["JAVA_HOME"] == java_home }
+end
+
+file "/etc/profile.d/jdk.sh" do
+  content <<-EOS
+    export JAVA_HOME=#{node['java']['java_home']}
+  EOS
+  mode 0755
+end
+
 
 java_ark "jdk" do
   url tarball_url

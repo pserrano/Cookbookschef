@@ -30,7 +30,12 @@ when "7"
   bin_cmds = node['java']['jdk']['7']['bin_cmds']
 end
 
-include_recipe "java::set_java_home"
+ruby_block  "set-env-java-home" do
+  block do
+    ENV["JAVA_HOME"] = java_home
+  end
+  not_if { ENV["JAVA_HOME"] == java_home }
+end
 
 yum_package "glibc" do
   arch "i686"
@@ -40,7 +45,7 @@ end
 java_ark "jdk-alt" do
   url tarball_url
   checksum tarball_checksum
-  app_home java_home
+  app_home java_home 
   bin_cmds bin_cmds
   action :install
   default false
