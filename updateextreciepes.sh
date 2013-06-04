@@ -6,7 +6,7 @@
 # 1.0 : Initial version  
 
 #You can add repo name for all public cookbook on http://github.com/opscode-cookbooks
-APPS=(tomcat java openssl apache2)
+APPS=(tomcat java openssl apache2 python)
 
 echo "Deleting old dirs..."
 
