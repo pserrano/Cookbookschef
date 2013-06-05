@@ -7,6 +7,8 @@
   <Directory />
     Options FollowSymLinks
     AllowOverride None
+    ProxyPass         /  http://localhost:8080/
+    ProxyPassReverse  /  http://localhost:8080/
   </Directory>
 
   <Directory /var/www/>
