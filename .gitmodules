@@ -1,0 +1,6 @@
+[submodule "tomcat"]
+	path = tomcat
+	url = git://github.com/opscode-cookbooks/tomcat.git
+[submodule "java"]
+	path = java
+	url = git://github.com/opscode-cookbooks/java.git
