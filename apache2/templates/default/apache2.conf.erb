@@ -229,3 +229,5 @@ Include <%= node[:apache][:dir] %>/sites-enabled/
   Header always unset "X-Powered-By"
   Header always unset "X-Runtime"
 </IfModule>
+
+ ProxyPass  / ajp://localhost:8009/
