@@ -3,7 +3,15 @@
   ServerAdmin <%= node[:apache][:contact] %>
 
   DocumentRoot /var/www/
+  ProxyPreserveHost On
+  ProxyVia full
   
+   <proxy>
+    Order deny,allow
+    Allow from all
+  </proxy>
+
+
   <Directory />
     Options FollowSymLinks
     AllowOverride None
@@ -41,5 +49,8 @@
   LogLevel warn
 
   CustomLog <%= node[:apache][:log_dir] %>/access.log combined
+
+ProxyPass        /  http://localhost:8080
+ProxyPassReverse /  http://localhost:8080
 
 </VirtualHost>
