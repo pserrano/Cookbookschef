@@ -7,8 +7,7 @@
   <Directory />
     Options FollowSymLinks
     AllowOverride None
-    ProxyPass         /  http://localhost:8080/
-    ProxyPassReverse  /  http://localhost:8080/
+    ProxyPass  / ajp://localhost:8009/
   </Directory>
 
   <Directory /var/www/>
