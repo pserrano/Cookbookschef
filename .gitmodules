@@ -1,3 +1,0 @@
-[submodule "tomcat"]
-	path = tomcat
-	url = git://github.com/kchendil/tomcat_latest.git
