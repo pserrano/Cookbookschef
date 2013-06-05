@@ -1,6 +1,0 @@
-[submodule "java"]
-	path = java
-	url = git://github.com/mattmcclean/java.git
-[submodule "tomcat"]
-	path = tomcat
-	url = git://github.com/mattmcclean/tomcat.git
