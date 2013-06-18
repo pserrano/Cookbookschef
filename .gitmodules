@@ -1,3 +1,6 @@
 [submodule "build-essential"]
 	path = build-essential
 	url = git://github.com/opscode-cookbooks/build-essential.git
+[submodule "opsworks-elb"]
+	path = opsworks-elb
+	url = https://github.com/crowdmob/chef-opsworks-elb
