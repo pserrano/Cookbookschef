@@ -50,7 +50,7 @@
 
   CustomLog <%= node[:apache][:log_dir] %>/access.log combined
 
-ProxyPass        /  http://localhost:8080
-ProxyPassReverse /  http://localhost:8080
+#ProxyPass        /  http://localhost:8080
+#ProxyPassReverse /  http://localhost:8080
 
 </VirtualHost>
