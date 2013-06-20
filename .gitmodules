@@ -4,3 +4,6 @@
 [submodule "opsworks-elb"]
 	path = opsworks-elb
 	url = https://github.com/crowdmob/chef-opsworks-elb
+[submodule "mcollective"]
+	path = mcollective
+	url = https://github.com/zts/cookbook-mcollective
