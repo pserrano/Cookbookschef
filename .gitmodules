@@ -7,3 +7,9 @@
 [submodule "mcollective"]
 	path = mcollective
 	url = https://github.com/zts/cookbook-mcollective
+[submodule "chef_handler"]
+	path = chef_handler
+	url = https://github.com/opscode-cookbooks/chef_handler
+[submodule "apt"]
+	path = apt
+	url = https://github.com/opscode-cookbooks/apt
